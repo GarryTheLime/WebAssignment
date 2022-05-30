@@ -13,71 +13,71 @@ $conn = @mysqli_connect($host,
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(empty($_POST["firstName"])) {
-			$err .= "Please enter a valid name";
+			$err .= "Please enter a valid first name </br>";
 		}
 		else {
 			
 			if(!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
-				$err .= "Only letters and white spaces allowed";
+				$err .= "Only letters and white spaces allowed </br>";
 			} else {
                 $firstName = htmlspecialchars(trim($_POST["firstName"]));
             }
 		}
 	
 	if(empty($_POST["lastName"])) {
-		$err .= "Please enter a valid name";
+		$err .= "Please enter a valid last name </br>";
 	}
 	else {
 		
 		if(!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
-			$err .= "Only letters and white spaces allowed";
+			$err .= "Only letters and white spaces allowed </br>";
 		} else {
             $lastName = htmlspecialchars(trim($_POST["lastName"]));
         }
 	}
 	
 	if(empty($_POST["studentNumber"])) {
-        $err .= "Please enter a valid student number";
+        $err .= "Please enter a valid student number </br>";
     }
     else {
         
         if(!preg_match("/^[0-9]*$/",$studentNumber)) {
-            $err .= "Only numbers allowed";
+            $err .= "Only numbers allowed </br>";
         } else {
             $studentNumber = htmlspecialchars(trim($_POST["studentNumber"]));
         }
     }
 
     if(empty($_POST["category"])) {
-        $err .= "Please enter a valid answer for 'Which of these platforms are the streaming media?' ";
+        $err .= "Please enter a valid answer for 'Which of these platforms are the streaming media?' </br>";
     }
     else {
         $category = ($_POST["category"]);
     }
 
     if(empty($_POST["textAnswer"])) {
-        $err .= "Please enter a valid answer for 'What is the main difference between streaming and live streaming?' ";
+        $err .= "Please enter a valid answer for 'What is the main difference between streaming and live streaming?' </br>";
     }
     else {
         $textAnswer = htmlspecialchars(trim($_POST["textAnswer"]));
     }
 
     if(empty($_POST["protocol"])) {
-        $err .= "Please enter a valid answer for 'What is the most used in streaming media protocol?' ";
+        $err .= "Please enter a valid answer for 'What is the most used in streaming media protocol?' </br>";
     }
     else {
         $protocol = ($_POST["protocol"]);
     }
 
     if(empty($_POST["appName"])) {
-        $err .= "Please enter a valid answer for 'The most popular subscription streaming services in the world is' ";
+        $err .= "Please enter a valid answer for 'The most popular subscription streaming services in the world is' </br>";
     }
     else {
         $appName = ($_POST["appName"]);
     }
 
     if(empty($_POST["favcolor"])) {
-        $err .= "Please enter a valid answer for 'Select the theme color of the Twitch' ";
+        $err .= "Please enter a valid answer for 'Select the theme color of the Twitch' </br>";
     }
     else {
         $favcolor = ($_POST["favcolor"]);
