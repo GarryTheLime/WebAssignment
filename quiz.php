@@ -41,7 +41,7 @@
 	
 		
 		
-        <form id="appForm" method="post" action="markquiz.php">
+        <form id="appForm" method="post" action="markquiz.php" novalidate>
             <!--Note we have to use a special escape character to print an apostrophe on the Web page -->
             
             <fieldset>
